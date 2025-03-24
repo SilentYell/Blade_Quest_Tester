@@ -2,105 +2,74 @@
 
 ## Introduction
 
-Welcome to the Blade Quest Playtest Version! This document will guide you through the process of setting up and playing the game, as well as provide information on the game controls and development workflow.
+Welcome to the Blade Quest Playtest Version! This document will guide you through the process of setting up and running the game. Follow the steps below to get started.
 
-## How to Set Up the Game
+## How to Set Up and Run the Game
 
-### 1. Install Node.js and npm
+### 1. Prerequisites
 
-Ensure you have Node.js and npm installed on your computer. You can download and install them from [nodejs.org](https://nodejs.org/).
+Make sure you have Node.js installed on your computer. You can get it by visiting nodejs.org and following the instructions there to download and install it. To check if **Node.js** is ready, open a terminal (on **Windows**, search for **"Command Prompt"** or **"cmd"**; on **Mac**, search for **"Terminal"**) and type:
 
-### 2. Download the Playtest Version
-
-Download the playtest version from the provided link and unzip the files.
-
-### 3. Navigate to the Project Directory
-
-Open a terminal and navigate to the project directory:
-```sh
-cd path/to/unzipped/directory
+```bash
+node -v
 ```
 
-### 4. Install Dependencies
+Then press Enter. If you see a version number (like v16.13.0), Node.js is installed and ready.
 
-Install the project dependencies using npm:
-```sh
+### 2. Steps to Run the Game
+
+1. #### Download the Repository
+If you haven’t yet, download the playtest folder from GitHub. It will be called Blade_Quest_Tester-master. Save it somewhere you can find it, like your Desktop or Downloads folder.
+
+2. #### Navigate to the Playtest Folder
+Open your terminal or Command Prompt. Type this command to go to the folder (replace "path/to" with where you saved it, like "Desktop"):
+
+```bash
+cd path/to/Blade_Quest_Tester-master
+```
+
+Press Enter to run the command.
+If this does not work then try finding the root folder for the test and right-clicking it and then clicking **"Copy as path"**. Go back to your terminal and try pasting that path with **ctrl+v** on Windows or **cmd+v** on Mac after the **cd** part.
+
+3. #### Install Dependencies
+In the same terminal window, type:
+
+```bash
 npm install
 ```
 
-### 5. Run the Game
+Press Enter. This will download some files the game needs. Wait until it finishes.
 
-Start the development server to run the game:
-```sh
-npm run dev
+4. #### Start the Game Server
+Now type:
+
+```bash
+npm start
 ```
-Open your web browser and navigate to `http://localhost:3000` to play the game.
 
-## Game Controls
+Press Enter. This starts the game server. You’ll see some text in the terminal—don’t close it yet!
 
-- **W**: Move forward
-- **A**: Move left
-- **S**: Move backward
-- **D**: Move right
-- **Mouse**: Look around
-- **Left Click**: Attack with equipped weapon
-- **E**: Interact with objects
-- **Space**: Jump
-- **Shift**: Sprint
-- **Esc**: Pause the game
+5. #### Open the Game in Your Browser
+Open your web browser (like Chrome, Firefox, or Edge). In the address bar at the top, type:
+<http://localhost:3000>
+Press Enter. The game should load in your browser.
+
+6. #### Stopping the Server When You’re Done
+When you’re finished playing and want to stop the game server, go back to the terminal window where you typed "npm start". Hold down the "Ctrl" key on your keyboard and press the "C" key at the same time (this is called "Ctrl+C"). This tells the server to stop. You’ll see the terminal prompt return, and you can close the window if you want.
 
 ## Troubleshooting
 
-If you encounter any issues or have any questions, feel free to reach out for assistance. Here are some common troubleshooting steps:
+- Error: npm or node not found
+Ensure Node.js is installed and added to your system's PATH.
 
-- **Game not starting**: Ensure you have installed all dependencies by running `npm install`.
-- **Controls not working**: Make sure the game window is in focus and you have clicked inside the window to capture mouse and keyboard input.
-- **Audio issues**: Check your computer's audio settings and ensure that the volume is turned up.
+- Port 3000 is already in use
+If you see this error, something else on your computer is using port 3000. You can stop that program, or ask someone to help you change the port in the server.js file.
 
-## Development Workflow
+- Game not loading properly
+Ensure all files (e.g., index.html, assets/, server.js, package.json) are present in the folder.
 
-### 1. Make Changes to Your Code
+## Additional Information
 
-Make changes to your code in the `src` directory. Ensure that your code follows the DRY (Don't Repeat Yourself) principle and is well-organized.
-
-### 2. Test Changes Locally
-
-Run the development server to test your changes locally:
-```sh
-npm run dev
-```
-Open your web browser and navigate to `http://localhost:3000` to test the game.
-
-### 3. Build the Project
-
-Once you are satisfied with your changes, build the project:
-```sh
-npm run build
-```
-
-### 4. Update the Playtest Version
-
-Copy the built files to the playtest folder:
-```sh
-npm run update-playtest
-```
-
-### 5. Deploy the Playtest Version
-
-Navigate to the playtest folder and push the changes to the remote repository:
-```sh
-npm run deploy-playtest
-```
-
-This script will build the project, copy the built files to the playtest folder, and push the changes to the remote repository.
-
-### 6. Verify the Playtest Version
-
-Ensure that the playtest version is working correctly by running the development server in the playtest folder:
-```sh
-cd /home/nikh/Blade_Quest/playtest
-npm run dev
-```
-Open your web browser and navigate to `http://localhost:3000` to verify the playtest version.
-
-Thank you for playtesting Blade Quest! Your feedback is valuable and will help improve the game.
+- This playtest version is built using Three.js and Vite.
+- If you encounter any issues, feel free to contact the developer.
+- Enjoy the game!

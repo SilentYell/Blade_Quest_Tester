@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "update-playtest": "npm run build && cp -r dist/* /home/nikh/Blade_Quest/playtest/ && cp package.json server.js /home/nikh/Blade_Quest/playtest/",
+    "update-playtest": "npm run build && cp -r dist/* /home/nikh/Blade_Quest/playtest/ && cp README.md package.json /home/nikh/Blade_Quest/playtest/",
     "deploy-playtest": "npm run update-playtest && cd /home/nikh/Blade_Quest/playtest && git add . && git commit -m 'Update playtest version' && git push origin master"
   },
   "keywords": [],
